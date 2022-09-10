@@ -45,6 +45,12 @@ server.post<{ Body: OrderType; Reply: OrderReplyType }>(
     };
 
     if (order.dish && order.qty) {
+      console.log(`
+# Order received:
+- dish: ${order.dish}
+- qty: ${order.qty}
+- orderNo: ${order.orderNo}
+      `);
       try {
         await placeOrder(order);
         reply.status(200).send({
