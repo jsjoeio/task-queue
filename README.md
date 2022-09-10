@@ -1,5 +1,7 @@
 # task queue
 
+Based on this tutorial: https://dev.to/sarbikbetal/simple-node-js-task-queue-with-bee-queue-and-redis-105b
+
 ## Notes
 
 Start Redis:
