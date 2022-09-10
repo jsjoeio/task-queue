@@ -42,6 +42,11 @@
   dependencies:
     fastify-plugin "^4.0.0"
 
+"@fastify/type-provider-typebox@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-2.3.0.tgz#4adb4a9cd3ccdbc5b2506852f3cec9554d678425"
+  integrity sha512-arEH1FL6CNTgctoVw++jNPJN9DdzUe7rJlb3XJyw7rAGiT2m402P4GMFVhtDqndQzEJN37UJXVYbCR9D0AahgQ==
+
 "@redis/bloom@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@redis/bloom/-/bloom-1.0.2.tgz#42b82ec399a92db05e29fffcdfd9235a5fc15cdf"
@@ -75,6 +80,11 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@redis/time-series/-/time-series-1.0.3.tgz#4cfca8e564228c0bddcdf4418cba60c20b224ac4"
   integrity sha512-OFp0q4SGrTH0Mruf6oFsHGea58u8vS/iI5+NpYdicaM+7BgqBZH8FFvNZ8rYYLrUO/QRqMq72NpXmxLVNcdmjA==
+
+"@sinclair/typebox@^0.24.39":
+  version "0.24.39"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.39.tgz#21d0c56c295a00e391e20a88a48c11d4a1210ac5"
+  integrity sha512-GqtkxoAjhTzoMwFg/JYRl+1+miOoyvp6mkLpbMSd2fIQak2KvY00ndlXxxkDBpuCPYkorZeEZf0LEQn9V9NRVQ==
 
 "@types/node@^18.7.16":
   version "18.7.16"

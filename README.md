@@ -20,3 +20,5 @@ To run app:
 
 1. start Redis
 2. run `yarn dev`
+
+This helped: https://www.fastify.io/docs/latest/Reference/TypeScript/

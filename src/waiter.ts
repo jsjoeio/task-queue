@@ -1,4 +1,5 @@
 import Queue, { QueueSettings } from "bee-queue";
+import { OrderType } from ".";
 
 const options: QueueSettings = {
   removeOnSuccess: true,
@@ -12,22 +13,18 @@ const options: QueueSettings = {
 const cookQueue = new Queue("cook", options);
 const serveQueue = new Queue("serve", options);
 
-export type Order = {
-  dish: string;
-  qty: number;
-  orderNo: strinig;
-};
-
 // acts as the publisher
-export function placeOrder(order: Order) {
+export function placeOrder(order: OrderType) {
   return cookQueue.createJob(order).save();
 }
 
-// acts as the consumer
-serveQueue.process(
-  (job: Queue.Job<Order>, done: Queue.DoneCallback<unknown>) => {
-    console.log(`🧾 ${job.data.qty}x ${job.data.dish} ready to be served 😋`);
-    //  Notify the client via push notification, web socket or email etc.
-    done(null, "success");
-  }
-);
+export function initializeWaiterServices() {
+  // acts as the consumer
+  serveQueue.process(
+    (job: Queue.Job<OrderType>, done: Queue.DoneCallback<unknown>) => {
+      console.log(`🧾 ${job.data.qty}x ${job.data.dish} ready to be served 😋`);
+      //  Notify the client via push notification, web socket or email etc.
+      done(null, "success");
+    }
+  );
+}
