@@ -1,12 +1,12 @@
 import fastify from "fastify";
 import dotenv from "dotenv";
+import formBodyPlugin from "@fastify/formbody";
 
 dotenv.config();
 
 const server = fastify();
 
-// TODO: express.json()
-// TODO: express.urlencoded
+server.register(formBodyPlugin);
 
 // Routes
 server.get("/", async (request, reply) => {
